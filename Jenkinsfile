@@ -3,7 +3,7 @@ pipeline {
 		stages{
 			stage('1-clone-Sithabile'){
 				steps{
-					checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[credentialsId: 'github-id', url: 'https://github.com/Team3-G4-Techops/Techops-Jenkins-Project.git']]])
+					checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[credentialsId: 'Kinge-Service', url: 'https://github.com/Kinge-Service/Etech-repo.git']]])
 					sh 'ps -ef'
 					sh 'sudo systemctl status jenkins'
 				}
